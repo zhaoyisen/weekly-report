@@ -1,0 +1,388 @@
+:root {
+  --paper: #f4f0e8;
+  --paper-strong: #ece6dc;
+  --ink: #202723;
+  --muted: #68736d;
+  --line: #ded6c8;
+  --forest: #237a57;
+  --blue: #2866b1;
+  --amber: #c77700;
+  --red: #b6423b;
+  --panel: #fffdfa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  overflow: hidden;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+.app-shell {
+  height: 100vh;
+  background:
+    linear-gradient(90deg, rgba(32, 39, 35, 0.04) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(32, 39, 35, 0.035) 1px, transparent 1px),
+    var(--paper);
+  background-size: 24px 24px;
+}
+
+.app-sider {
+  padding: 18px 12px;
+  color: #f9f4ea;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 58px;
+  padding: 4px 8px 18px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.brand-mark {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  color: #202723;
+  font-size: 18px;
+  font-weight: 700;
+  background: #d9b44a;
+  border-radius: 6px;
+  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.18);
+}
+
+.brand-title,
+.brand-subtitle {
+  display: block;
+  color: #fff8ec !important;
+}
+
+.brand-title {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.brand-subtitle {
+  font-size: 11px;
+  opacity: 0.68;
+}
+
+.side-menu {
+  color: #f9f4ea;
+  background: transparent;
+  border: 0;
+}
+
+.side-menu .ant-menu-item {
+  height: 40px;
+  color: rgba(255, 248, 236, 0.72);
+  border-radius: 6px;
+}
+
+.side-menu .ant-menu-item-selected {
+  color: #fff8ec;
+  background: rgba(217, 180, 74, 0.18);
+}
+
+.workspace {
+  min-width: 0;
+  height: 100vh;
+  padding: 22px 26px;
+  overflow: auto;
+}
+
+.workspace-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 16px;
+}
+
+.workspace-header h3,
+.settings-panel h4,
+.projects-panel h4 {
+  margin: 0;
+  letter-spacing: 0;
+}
+
+.quick-input,
+.stats-strip,
+.toolbar,
+.settings-section,
+.projects-panel,
+.task-table {
+  background: rgba(255, 253, 250, 0.96);
+  border: 1px solid var(--line);
+  box-shadow: 0 16px 42px rgba(42, 34, 22, 0.08);
+}
+
+.quick-input {
+  padding: 14px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+}
+
+.quick-actions {
+  margin-top: 10px;
+}
+
+.stats-strip {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(120px, 1fr));
+  gap: 1px;
+  padding: 0;
+  margin-bottom: 12px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.stat-card {
+  position: relative;
+  display: flex;
+  min-height: 78px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  padding: 14px 16px;
+  background: #fffdfa;
+}
+
+.stat-card::before {
+  position: absolute;
+  top: 12px;
+  bottom: 12px;
+  left: 0;
+  width: 4px;
+  content: "";
+  border-radius: 0 4px 4px 0;
+}
+
+.stat-card strong {
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.stat-ink::before {
+  background: var(--ink);
+}
+
+.stat-green::before {
+  background: var(--forest);
+}
+
+.stat-blue::before {
+  background: var(--blue);
+}
+
+.stat-amber::before {
+  background: var(--amber);
+}
+
+.stat-red::before {
+  background: var(--red);
+}
+
+.quick-select {
+  min-width: 118px;
+}
+
+.tag-input {
+  min-width: 170px;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+}
+
+.search-input {
+  width: 260px;
+}
+
+.status-filter {
+  min-width: 220px;
+}
+
+.project-filter {
+  min-width: 180px;
+}
+
+.task-table {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.task-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.task-cell .ant-typography {
+  margin: 0;
+}
+
+.settings-panel,
+.projects-panel {
+  max-width: 1080px;
+}
+
+.settings-section {
+  padding: 18px;
+  margin-bottom: 14px;
+  border-radius: 8px;
+}
+
+.form-flex {
+  flex: 1;
+  min-width: 0;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.ai-note {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  background: #f8f3e8;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.database-path {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 8px 10px;
+  margin-bottom: 12px;
+  color: var(--muted);
+  background: #f8f3e8;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.app-info-section {
+  max-width: 560px;
+}
+
+.info-row {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  align-items: center;
+  min-height: 34px;
+  border-bottom: 1px solid rgba(222, 214, 200, 0.72);
+}
+
+.info-row:last-child {
+  border-bottom: 0;
+}
+
+.panel-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.projects-panel {
+  padding: 18px;
+  border-radius: 8px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+}
+
+.project-item {
+  display: grid;
+  grid-template-columns: 8px 1fr auto;
+  align-items: center;
+  gap: 12px;
+  min-height: 76px;
+  padding: 12px;
+  background: #f9f5ed;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.project-color {
+  width: 8px;
+  height: 46px;
+  border-radius: 4px;
+}
+
+.project-main {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.color-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.color-option span {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+}
+
+.ant-table-cell {
+  vertical-align: top;
+}
+
+@media (max-width: 1080px) {
+  .workspace {
+    padding: 18px;
+  }
+
+  .workspace-header,
+  .toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .search-input,
+  .status-filter,
+  .project-filter {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .stats-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
