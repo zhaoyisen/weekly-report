@@ -107,4 +107,12 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         shell: bash
         run: |
-          gh release upload "${{ steps.release.outputs.tag }}" artifacts/**/* --clobber
+          mapfile -d '' files < <(find artifacts -type f \( \
+            -name '*.exe' -o \
+            -name '*.zip' -o \
+            -name '*.dmg' -o \
+            -name '*.AppImage' -o \
+            -name '*.deb' -o \
+            -name '*.tar.gz' \
+          \) -print0)
+          gh release upload "${{ steps.release.outputs.tag }}" "${files[@]}" --repo zhaoyisen/weekly-report --clobber
