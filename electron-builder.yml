@@ -1,6 +1,5 @@
 appId: com.zhaoyisen.smartweeklyreport
 productName: Smart Weekly Report
-electronDist: node_modules/electron/dist
 compression: store
 directories:
   output: release
