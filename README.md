@@ -34,7 +34,15 @@ npm run dist
 
 - `Smart-Weekly-Report-Setup-1.0.0-x64.exe`：Windows 安装包
 - `Smart-Weekly-Report-Portable-1.0.0-x64.exe`：便携版
+- `Smart-Weekly-Report-Windows-1.0.0-x64.zip`：Windows ZIP 版
+- `Smart-Weekly-Report-macOS-1.0.0-x64.dmg`：macOS Intel 安装包
+- `Smart-Weekly-Report-macOS-1.0.0-arm64.dmg`：macOS Apple Silicon 安装包
+- `Smart-Weekly-Report-Linux-1.0.0-x64.AppImage`：Linux AppImage
+- `Smart-Weekly-Report-Linux-1.0.0-x64.deb`：Linux deb 包
+- `Smart-Weekly-Report-Linux-1.0.0-x64.tar.gz`：Linux 压缩包
 - `win-unpacked/Smart Weekly Report.exe`：免安装解包版
+
+多系统发布建议通过 GitHub Actions 的 `Multi-platform release` 工作流生成。macOS 包未签名和未公证时，首次打开可能被 Gatekeeper 拦截。
 
 ## 隐私与数据安全
 

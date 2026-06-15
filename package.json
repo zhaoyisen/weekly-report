@@ -4,13 +4,16 @@
   "description": "Smart Weekly Report helps record work tasks and polish them into weekly report entries with a custom AI API.",
   "main": "out/main/index.js",
   "private": true,
-  "author": "",
+  "author": "zhaoyisen <yi3woods@gmail.com>",
   "license": "MIT",
   "scripts": {
     "dev": "electron-vite dev",
     "build": "tsc --noEmit && electron-vite build",
     "preview": "electron-vite preview",
-    "dist": "npm run build && electron-builder"
+    "dist": "npm run build && electron-builder",
+    "dist:win": "npm run build && electron-builder --win",
+    "dist:mac": "npm run build && electron-builder --mac",
+    "dist:linux": "npm run build && electron-builder --linux"
   },
   "dependencies": {
     "@ant-design/icons": "^5.6.1",

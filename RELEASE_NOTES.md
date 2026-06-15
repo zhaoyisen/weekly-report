@@ -16,8 +16,15 @@
 
 - `Smart-Weekly-Report-Setup-1.0.0-x64.exe`：Windows 安装包
 - `Smart-Weekly-Report-Portable-1.0.0-x64.exe`：便携版
+- `Smart-Weekly-Report-Windows-1.0.0-x64.zip`：Windows ZIP 版
+- `Smart-Weekly-Report-macOS-1.0.0-x64.dmg`：macOS Intel 安装包
+- `Smart-Weekly-Report-macOS-1.0.0-arm64.dmg`：macOS Apple Silicon 安装包
+- `Smart-Weekly-Report-Linux-1.0.0-x64.AppImage`：Linux AppImage
+- `Smart-Weekly-Report-Linux-1.0.0-x64.deb`：Linux deb 包
+- `Smart-Weekly-Report-Linux-1.0.0-x64.tar.gz`：Linux 压缩包
 
 ## 说明
 
 - 当前版本暂未进行代码签名，Windows 可能提示未知发布者。
+- macOS 包当前未签名、未公证，首次打开可能被 Gatekeeper 拦截。
 - 应用不会上传全部历史记录。只有在用户主动使用 AI 优化功能时，当前任务内容会发送到用户自行配置的 AI API 服务。

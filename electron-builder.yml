@@ -1,8 +1,7 @@
-appId: com.weeklyreport.tool
+appId: com.zhaoyisen.smartweeklyreport
 productName: Smart Weekly Report
 electronDist: node_modules/electron/dist
 compression: store
-icon: build/icon.ico
 directories:
   output: release
 files:
@@ -10,9 +9,12 @@ files:
   - package.json
   - node_modules/sql.js/**
 win:
+  icon: build/icon.ico
+  artifactName: Smart-Weekly-Report-Windows-${version}-${arch}.${ext}
   target:
     - nsis
     - portable
+    - zip
 nsis:
   artifactName: Smart-Weekly-Report-Setup-${version}-${arch}.${ext}
   oneClick: false
@@ -21,3 +23,30 @@ nsis:
   createStartMenuShortcut: true
 portable:
   artifactName: Smart-Weekly-Report-Portable-${version}-${arch}.${ext}
+mac:
+  icon: build/icon.icns
+  category: public.app-category.productivity
+  artifactName: Smart-Weekly-Report-macOS-${version}-${arch}.${ext}
+  target:
+    - target: dmg
+      arch:
+        - x64
+        - arm64
+    - target: zip
+      arch:
+        - x64
+        - arm64
+linux:
+  icon: build/icon.png
+  category: Office
+  artifactName: Smart-Weekly-Report-Linux-${version}-${arch}.${ext}
+  target:
+    - target: AppImage
+      arch:
+        - x64
+    - target: deb
+      arch:
+        - x64
+    - target: tar.gz
+      arch:
+        - x64
